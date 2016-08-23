@@ -2,7 +2,7 @@
 
 This is a sample Spring MVC web application which secured by Spring Security. Instead of using form-based security, it is secured by Spring Security OAuth2 and the OAuth2 provider is Google.
 
-The `google-oauth2.properties` (in `src/main/resources`) contains the details of the Google application which it uses to authenticate details. Change the values of the following attributes to the values for your application:
+The [google-oauth2.properties](src/main/resources/google-oauth2.properties) (in `src/main/resources`) contains the details of the Google application which it uses to authenticate details. Change the values of the following attributes to the values for your application:
 
 - `oauth2.clientId`
 - `oauth2.clientSecret`
@@ -17,7 +17,7 @@ While the `pom.xml` file includes Sprint Boot dependencies, they're only used fo
 * In the popup select the following
 	- Application Type = Web Application
 	- Authorized Javascript Origins = <YOUR DOMAIN>, 
-	- Authorized Redirect URI = <THE CALL BACK HANDLER>, the URI for our application is /googleLogin so for local testing you should enter `http://localhost:8080/`*context-path*`/`*callback-path*
+	- Authorized Redirect URI = <THE CALL BACK HANDLER>, the URI for our application is `/oauth2/callback` so for local testing you should enter `http://localhost:8080/`*context-path*`/oauth2/callback`
 	- Copy the client ID and client Secret and update the properties file
 	- Make sure you update the mandatory values on the "APIs & auth" --> "Consent screen" page as the application will not work without it.
 
@@ -25,4 +25,5 @@ When you have a the Google App configured, the Spring application is running, an
 
 ## Technical Details
 
-Please refer to [my blog post](http://lorenzo-dee.blogspot.com/2016/08/spring-security-oauth2-with-google.html).
+Please refer to [my blog post](http://lorenzo-dee.blogspot.com/2016/08/spring-security-oauth2-with-google.html). [OAuth2ClientSecurityConfig.java](src/main/java/web/sample/OAuth2ClientSecurityConfig.java) is the configuration class that contains the OAuth2 stuff.
+
