@@ -55,7 +55,7 @@ import oauth2.google.GoogleUserInfoTokenServices;
 public class OAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	// This is made possible because of @EnableOAuth2Client
-	// and RequestContextFilter.
+	// and RequestContextListener.
 	@Autowired
 	private OAuth2ClientContext oauth2ClientContext;
 
