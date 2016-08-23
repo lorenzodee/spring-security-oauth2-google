@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+
+  <contextListener
+    class="ch.qos.logback.classic.jul.LevelChangePropagator">
+    <!-- reset all previous level configurations of all j.u.l. loggers -->
+    <resetJUL>true</resetJUL>
+  </contextListener>
+
+  <appender name="STDOUT"
+    class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %-5level %logger{36} - %msg%n
+     </pattern>
+    </encoder>
+  </appender>
+
+  <logger name="web.sample" level="DEBUG" />
+
+  <logger name="org.springframework.security.access.intercept" level="DEBUG" />
+  <logger name="org.springframework.security.web" level="DEBUG" />
+  <logger name="org.springframework.security.oauth2" level="DEBUG" />
+  <logger name="org.springframework.web.client" level="DEBUG" />
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+</configuration>
