@@ -25,4 +25,4 @@ When you have a the Google App configured, the Spring application is running, an
 
 ## Technical Details
 
-Please refer to [my blog post](http://lorenzo-dee.blogspot.com).
+Please refer to [my blog post](http://lorenzo-dee.blogspot.com/2016/08/spring-security-oauth2-with-google.html).
