@@ -105,8 +105,8 @@ public class OAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapter {
 		details.setTokenName(tokenName);
 		String commaSeparatedScopes = scope;
 		details.setScope(parseScopes(commaSeparatedScopes));
-        // Defaults to use current URI
-        /*
+		// Defaults to use current URI
+		/*
 		 * If a pre-established redirect URI is used, it will need to be an
 		 * absolute URI. To do so, it'll need to compute the URI from a
 		 * request. The HTTP request object is available when you override
